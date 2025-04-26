@@ -1,169 +1,198 @@
 <!-- 
-README.md for github.com/Hackinside 
-This uses HTML and CSS for layout and styling.
-JavaScript (including Three.js) cannot run directly in GitHub READMEs.
+README.md for your GitHub Profile: github.com/Hackinside 
+This content goes into the README.md file inside the SPECIAL repository named "Hackinside/Hackinside".
+It uses HTML and CSS for styling within the limits of GitHub's Markdown rendering.
+JavaScript/Three.js CANNOT run directly here. Showcase it via links or embedded media.
 -->
 
 <div align="center">
 
 <style>
-  /* Basic Reset & Container Styling */
+  /* --- Global Styles & Container --- */
   .profile-container {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-    max-width: 900px;
+    max-width: 950px; /* Slightly wider */
     margin: auto;
-    padding: 20px;
-    background-color: #f6f8fa; /* Light background */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    color: #24292e; /* Dark text */
-    border: 1px solid #e1e4e8;
+    padding: 25px;
+    background-color: #ffffff; /* White main background */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    color: #24292e;
+    border: 1px solid #d0d7de; /* Lighter border */
+    overflow: hidden; /* Contain background gradients */
   }
 
-  /* Header Styling */
+  /* --- Header --- */
   .profile-header {
     text-align: center;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #e1e4e8;
-    background: linear-gradient(135deg, #6e40c9, #a855f7, #ec4899); /* Gradient background */
-    color: #ffffff; /* White text on gradient */
-    padding: 30px 20px;
-    border-radius: 8px 8px 0 0; /* Rounded top corners */
-    animation: gradient-animation 10s ease infinite;
-    background-size: 200% 200%;
-  }
-
-  @keyframes gradient-animation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    margin: -25px -25px 30px -25px; /* Extend to edges */
+    padding: 40px 25px 30px 25px;
+    background: linear-gradient(140deg, #58a6ff, #3182ce, #2c5282); /* Blue gradient */
+    color: #ffffff;
+    border-bottom: 1px solid #cdd5df;
+    position: relative; /* For potential pseudo-elements */
   }
 
   .profile-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    font-weight: bold;
+    margin: 0 0 5px 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: -0.5px;
   }
 
   .profile-header p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-top: 5px;
-    opacity: 0.9;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 300;
   }
 
-  /* Section Styling */
+  /* --- Section Styling --- */
   .profile-section {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #ffffff; /* White background for sections */
+    margin-bottom: 35px;
+    padding: 25px;
+    background-color: #f6f8fa; /* Light grey for sections */
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e1e4e8;
+    border: 1px solid #d8dee4;
+    text-align: left; /* Default align sections left */
   }
 
   .profile-section h2 {
     margin-top: 0;
-    border-bottom: 2px solid #6e40c9; /* Accent color border */
-    padding-bottom: 8px;
-    margin-bottom: 15px;
-    color: #6e40c9; /* Accent color */
-    font-size: 1.8em;
+    border-bottom: 2px solid #58a6ff; /* Accent color border */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #1c4a79; /* Darker Blue */
+    font-size: 1.9em;
+    font-weight: 600;
   }
 
-  /* 3D Showcase Specific Styling */
+  /* --- Specific Section Adjustments --- */
+  #threejs-showcase, #stats, #connect {
+    text-align: center; /* Center specific sections */
+  }
+  
   #threejs-showcase {
-    text-align: center;
-    background-color: #24292e; /* Dark background for contrast */
-    color: #f0f0f0;
-    border: none;
+     background-color: #24292e; /* Dark background for 3D Showcase */
+     color: #e1e4e8;
+     border: 1px solid #444c56;
   }
    #threejs-showcase h2 {
-     color: #a855f7; /* Lighter accent for dark background */
-     border-bottom-color: #a855f7;
+     color: #79c0ff; /* Lighter Blue for dark bg */
+     border-bottom-color: #79c0ff;
    }
-
-  #threejs-showcase p {
-    font-style: italic;
-    margin-bottom: 15px;
-  }
-
-  #threejs-showcase .demo-link {
+   #threejs-showcase p {
+     margin-bottom: 18px;
+     font-size: 1.1em;
+   }
+   #threejs-showcase img {
+     max-width: 90%;
+     height: auto;
+     border-radius: 6px;
+     margin-bottom: 15px;
+     border: 1px solid #555c66;
+   }
+   #threejs-showcase .demo-link {
      display: inline-block;
-     padding: 10px 20px;
-     background-color: #6e40c9;
-     color: white;
+     padding: 12px 25px;
+     background-color: #58a6ff;
+     color: #ffffff;
      text-decoration: none;
-     border-radius: 5px;
-     transition: background-color 0.3s ease;
+     border-radius: 6px;
+     transition: background-color 0.3s ease, transform 0.2s ease;
      font-weight: bold;
-  }
+     font-size: 1.1em;
+     border: 1px solid #3182ce;
+   }
    #threejs-showcase .demo-link:hover {
-      background-color: #a855f7;
+      background-color: #79c0ff;
+      transform: translateY(-2px);
    }
 
-  /* Skills Styling */
+  /* --- Skills --- */
   .skills-list {
     list-style: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* Spacing between skill items */
-    justify-content: center;
+    gap: 12px;
+    justify-content: center; /* Center skills */
   }
-
   .skill-item {
-    background-color: #f1f1f1; /* Light gray background for skill tags */
-    padding: 8px 15px;
-    border-radius: 20px; /* Pill shape */
-    font-size: 0.95em;
+    background-color: #dde6f0; /* Lighter blue-grey */
+    color: #1c4a79;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 1em;
     font-weight: 500;
-    display: inline-flex; /* Align icon and text */
+    display: inline-flex;
     align-items: center;
-    gap: 8px; /* Space between icon and text */
-    border: 1px solid #ddd;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    gap: 8px;
+    border: 1px solid #c4cde0;
+    transition: all 0.2s ease-in-out;
   }
   .skill-item:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    background-color: #c7d2e0;
   }
-
-  /* Stats Styling */
+  
+  /* --- GitHub Stats --- */
   .stats-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px; /* Space between stat images */
-    align-items: flex-start; /* Align tops */
+    gap: 15px;
+    align-items: flex-start;
   }
   .stats-container img {
-      max-width: 100%; /* Ensure responsiveness */
-      height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #d8dee4;
   }
-
-  /* Connect Section */
+  
+  /* --- Repositories Link --- */
+   .repo-link-button {
+     display: inline-block;
+     padding: 10px 20px;
+     margin-top: 15px;
+     background-color: #2da44e; /* Green button */
+     color: white;
+     text-decoration: none;
+     border-radius: 6px;
+     transition: background-color 0.3s ease, transform 0.2s ease;
+     font-weight: bold;
+     border: 1px solid #2c974b;
+   }
+   .repo-link-button:hover {
+     background-color: #31b455;
+     transform: translateY(-2px);
+   }
+   
+  /* --- Connect Section --- */
   .connect-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-    display: inline-block; /* Ensures proper spacing and hover area */
+    margin: 0 8px;
+    display: inline-block;
+    transition: transform 0.2s ease;
   }
   .connect-links a:hover {
-      opacity: 0.7;
+    transform: scale(1.1);
   }
   .connect-links img {
-     width: 32px; /* Control icon size */
-     height: 32px;
-     vertical-align: middle;
+    height: 36px; /* Slightly larger badges */
+    width: auto;
+    vertical-align: middle;
   }
 
-  /* Footer */
+  /* --- Footer --- */
   .profile-footer {
     text-align: center;
-    margin-top: 30px;
-    font-size: 0.9em;
-    color: #586069; /* Subdued text color */
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 0.95em;
+    color: #57606a; /* Muted footer text */
+    border-top: 1px solid #e1e4e8;
   }
 
 </style>
@@ -171,56 +200,67 @@ JavaScript (including Three.js) cannot run directly in GitHub READMEs.
 <div class="profile-container">
 
   <header class="profile-header">
-    <h1>Hi there 👋, I'm Hackinside!</h1>
-    <p>[Your Short Tagline - e.g., Security Enthusiast | Full-Stack Developer | 3D Graphics Explorer]</p>
+    <h1>Hey, I'm Hackinside! 👋</h1>
+    <p>[Your Concise Tagline - e.g., Cybersecurity Analyst | Web Tinkerer | 3D Graphics Aficionado]</p>
   </header>
 
   <!-- About Me Section -->
   <section id="about" class="profile-section">
     <h2>🧐 About Me</h2>
     <p>
-      [Write a brief introduction about yourself. What are you passionate about? What kind of work do you do or aspire to do? Keep it engaging!]
-      <br><br>
-      Currently exploring [mention current interests, e.g., vulnerability research, web development, procedural generation in Three.js]. Always eager to learn and collaborate on interesting projects!
+       [Introduce yourself here. What drives you? What are your core technical interests? What kind of problems do you enjoy solving?] 
+       <br><br>
+       For instance: I'm deeply passionate about [mention a specific area like network security, reverse engineering, or perhaps front-end development]. I enjoy building [mention types of projects, e.g., secure applications, interactive web experiences] and exploring technologies like [mention specific tech, e.g., Python, Wireshark, React, Three.js].
+       <br><br>
+       🌱 I’m currently diving deeper into [mention a current learning goal, e.g., advanced exploit development, WebGL shaders, or a specific framework].
+       <br>
+       👯 I’m open to collaborating on [mention types of projects you're interested in, e.g., open-source security tools, interesting web apps].
+       <br>
+       💬 Ask me about [mention topics you're knowledgeable/passionate about].
     </p>
   </section>
 
-  <!-- "3D Showcase" Section -->
+  <!-- 3D Showcase Section -->
   <section id="threejs-showcase" class="profile-section">
-      <h2>✨ 3D Showcase (via GIF/Link)</h2>
+      <h2>✨ 3D & Graphics Showcase</h2>
       <p>
-        While GitHub READMEs can't run JavaScript like Three.js directly, here's a glimpse of what I can do!
+        While I can't run complex scripts like Three.js directly in this README, I love exploring the world of 3D graphics. Here’s a sample or link to my work:
       </p>
-      <!-- Option 1: Embed a GIF you created -->
+      
+      <!-- OPTION 1: Link to a Live Demo (Recommended) -->
+      <!-- Make sure the link goes to a working demo hosted elsewhere (GitHub Pages, Netlify, CodePen, etc.) -->
+      <a href="[URL_TO_YOUR_LIVE_THREEJS_DEMO]" class="demo-link" target="_blank" rel="noopener noreferrer">🚀 View a Live Three.js Demo</a>
+      <p style="font-size: 0.9em; margin-top: 10px;">(Click the button above to see it in action!)</p>
+      
+      <!-- OPTION 2: Embed a GIF (Alternative) -->
+      <!-- Create a GIF of your animation, upload it (e.g., to this repo), and uncomment the line below -->
       <!-- 
-      <img src="[URL_TO_YOUR_THREEJS_ANIMATION.gif]" alt="Three.js Animation Demo" width="500"/> 
+      <img src="[URL_TO_YOUR_THREEJS_ANIMATION.gif]" alt="Three.js Animation Preview" />
+      <p style="font-size: 0.9em; margin-top: 5px;">(Above is a GIF preview of a Three.js project)</p> 
       -->
       
-      <!-- Option 2: Link to a live demo -->
-      <p>Check out a live demo I built:</p>
-      <a href="[URL_TO_YOUR_LIVE_THREEJS_DEMO]" class="demo-link" target="_blank" rel="noopener noreferrer">🚀 View Live Three.js Project</a>
-
-      <!-- Placeholder Text if no GIF/Link yet -->
-      <p>(Replace the comment above with your GIF or update the link to showcase your 3D project!)</p>
+      <!-- Placeholder if you haven't set up Option 1 or 2 yet -->
+       <p style="font-style: italic;">(Replace the link above or uncomment the GIF section to showcase your project!)</p>
   </section>
 
   <!-- Skills Section -->
   <section id="skills" class="profile-section">
-    <h2>🛠️ My Skills</h2>
+    <h2>🛠️ Tech Stack & Skills</h2>
     <ul class="skills-list">
-      <!-- Add/Remove skills as needed. You can find simple icons/emojis -->
-      <li class="skill-item">💻 JavaScript</li>
-      <li class="skill-item">🎨 Three.js</li>
-      <li class="skill-item">🌐 HTML5</li>
-      <li class="skill-item">💅 CSS3</li>
+      <!-- Add/Remove skills. Use relevant icons/emojis if desired -->
       <li class="skill-item">🐍 Python</li>
-      <li class="skill-item">🔒 Cybersecurity Concepts</li>
+      <li class="skill-item">🔒 Cybersecurity</li>
+      <li class="skill-item">⚙️ Reverse Engineering</li>
+      <li class="skill-item">🌐 Networking</li>
       <li class="skill-item">🐧 Linux</li>
+      <li class="skill-item">🎨 Three.js / WebGL</li>
+      <li class="skill-item">💻 JavaScript</li>
+      <li class="skill-item">📄 HTML5</li>
+      <li class="skill-item">💅 CSS3</li>
       <li class="skill-item">🔧 Git & GitHub</li>
-      <li class="skill-item">🐳 Docker</li>
-      <li class="skill-item">⚙️ [Another Skill]</li>
-      <li class="skill-item">💡 [Another Skill]</li>
-      <!-- Add more skills here -->
+      <li class="skill-item">🎮 Game Console Modding (e.g., 3DO, PS)</li> 
+      <li class="skill-item">💡 [Your Niche Skill 1]</li>
+      <li class="skill-item">🚀 [Your Niche Skill 2]</li>
     </ul>
   </section>
 
@@ -228,55 +268,47 @@ JavaScript (including Three.js) cannot run directly in GitHub READMEs.
   <section id="stats" class="profile-section">
       <h2>📊 My GitHub Stats</h2>
       <div class="stats-container">
-        <!-- Replace 'Hackinside' with your GitHub username -->
-        <!-- You can customize themes: https://github.com/anuraghazra/github-readme-stats -->
-        <img src="https://github-readme-stats.vercel.app/api?username=Hackinside&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="Hackinside's GitHub Stats" />
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Hackinside&layout=compact&theme=radical&hide_border=true&langs_count=8" alt="Top Languages" />
-         <!-- Optional: Contribution Streak -->
-         <!-- <img src="https://github-readme-streak-stats.herokuapp.com/?user=Hackinside&theme=radical&hide_border=true" alt="GitHub Streak Stats"/> -->
+        <!-- Replace 'Hackinside' with your username. Customize themes: https://github.com/anuraghazra/github-readme-stats -->
+        <img src="https://github-readme-stats.vercel.app/api?username=Hackinside&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true" alt="Hackinside's GitHub Stats" />
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Hackinside&layout=compact&theme=github_dark&hide_border=true&langs_count=8" alt="Top Languages" />
+        <!-- Optional: Contribution Streak -->
+        <!-- <img src="https://github-readme-streak-stats.herokuapp.com/?user=Hackinside&theme=github_dark&hide_border=true" alt="GitHub Streak Stats"/> -->
       </div>
+      <!-- Link to Repositories Tab -->
+       <a href="https://github.com/Hackinside?tab=repositories" class="repo-link-button" target="_blank" rel="noopener noreferrer">View My Repositories</a>
   </section>
 
-  <!-- Pinned Projects/Highlights Section (Optional but Recommended) -->
-  <section id="projects" class="profile-section">
-      <h2>📌 Pinned Projects / Highlights</h2>
-       <!-- GitHub's own pinned repositories feature is usually better, but you can manually list some here too -->
-      <ul>
-        <li><a href="[LINK_TO_PROJECT_1]" target="_blank" rel="noopener noreferrer"><strong>Project Title 1:</strong> Brief description of the project.</a></li>
-        <li><a href="[LINK_TO_PROJECT_2]" target="_blank" rel="noopener noreferrer"><strong>Project Title 2:</strong> Brief description of the project.</a></li>
-        <li><a href="[LINK_TO_PROJECT_3]" target="_blank" rel="noopener noreferrer"><strong>Project Title 3:</strong> Brief description of the project.</a></li>
-      </ul>
-      <p align="center">
-          <a href="https://github.com/Hackinside?tab=repositories" target="_blank" rel="noopener noreferrer">View All My Repositories</a>
-      </p>
-  </section>
 
   <!-- Connect With Me Section -->
   <section id="connect" class="profile-section">
-    <h2>🤝 Connect With Me</h2>
-    <p align="center" class="connect-links">
-      <!-- Replace '#' with your actual profile links -->
+    <h2>🤝 Let's Connect</h2>
+    <p>Find me on:</p>
+    <p class="connect-links">
+      <!-- Update these links -->
       <a href="https://github.com/Hackinside" target="_blank" rel="noopener noreferrer">
           <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
       </a>
-      <a href="[YOUR_LINKEDIN_URL]" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.youtube.com/hackinside" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
+      </a>
+       <a href="https://twitter.com/bioboy" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.shields.io/badge/X_(Twitter)-000000?style=for-the-badge&logo=x&logoColor=white" alt="X (Twitter)"/>
+      </a>
+      <a href="[YOUR_LINKEDIN_URL_IF_ANY]" target="_blank" rel="noopener noreferrer">
           <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
       </a>
       <a href="mailto:[YOUR_EMAIL_ADDRESS]">
           <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
       </a>
-      <a href="[YOUR_TWITTER_URL]" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"/>
-      </a>
-      <!-- Add other relevant social links (e.g., Portfolio Website, Blog) -->
+      <!-- Add other relevant links like a personal portfolio website -->
        <a href="[YOUR_PORTFOLIO_URL]" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.shields.io/badge/Portfolio-6e40c9?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Portfolio"/>
+          <img src="https://img.shields.io/badge/Portfolio-4A90E2?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Portfolio"/>
       </a>
     </p>
   </section>
 
   <footer class="profile-footer">
-    <p>⭐️ From Hackinside ⭐️</p>
+    <p>Thanks for visiting my profile!</p>
   </footer>
 
 </div>
