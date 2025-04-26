@@ -1,184 +1,164 @@
 <!-- 
-README.md for your GitHub Profile: github.com/Hackinside 
-This content goes into the README.md file inside the SPECIAL repository named "Hackinside/Hackinside".
-Uses HTML and CSS for styling with a dark theme.
+README.md for GitHub Profile: github.com/Hackinside 
+Goes into the README.md of the "Hackinside/Hackinside" repository.
+Pure black background, removed sections, repo buttons, updated connect links.
 -->
 
 <div align="center">
 
 <style>
-  /* --- Global Styles & Container (Dark Theme) --- */
+  /* --- Global Styles & Container (Pure Black Theme) --- */
   .profile-container {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
     max-width: 900px; 
     margin: auto;
-    padding: 25px;
-    background-color: #0d1117; /* GitHub Dark Background */
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    color: #c9d1d9; /* Light Grey Text */
-    border: 1px solid #30363d; /* Darker Border */
+    padding: 30px; /* Increased padding */
+    background-color: #000000; /* Pure Black Background */
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 170, 255, 0.2); /* Subtle accent glow */
+    color: #e0e0e0; /* Light Grey Text */
+    border: 1px solid #333; /* Dark Grey Border */
     overflow: hidden; 
   }
 
   a {
-    color: #58a6ff; /* Link color */
+    color: #00aaff; /* Bright Blue Link color */
     text-decoration: none;
   }
   a:hover {
     text-decoration: underline;
+    color: #33ccff; /* Lighter blue on hover */
   }
 
   /* --- Header --- */
   .profile-header {
     text-align: center;
-    margin: -25px -25px 35px -25px; 
-    padding: 45px 25px 35px 25px;
-    background: linear-gradient(140deg, #1f6feb, #2d6cdf, #3a6aa0); /* Darker Blue gradient */
+    margin: -30px -30px 40px -30px; /* Extend to edges */
+    padding: 50px 30px 40px 30px;
+    background: linear-gradient(140deg, #111, #222, #111); /* Dark grey gradient */
     color: #ffffff;
-    border-bottom: 1px solid #21262d; 
-    position: relative;
+    border-bottom: 1px solid #333; 
   }
 
   .profile-header h1 {
-    margin: 0 0 8px 0;
-    font-size: 2.6em;
+    margin: 0 0 10px 0;
+    font-size: 2.8em;
     font-weight: 600;
+    color: #ffffff; /* White header text */
   }
 
   .profile-header p {
-    font-size: 1.25em;
+    font-size: 1.3em;
     margin-top: 5px;
-    color: rgba(220, 220, 220, 0.85);
+    color: rgba(220, 220, 220, 0.8);
     font-weight: 300;
   }
 
   /* --- Section Styling --- */
   .profile-section {
-    margin-bottom: 35px;
-    padding: 25px;
-    background-color: #161b22; /* Slightly Lighter Dark Background */
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: #101010; /* Very Dark Grey sections */
     border-radius: 8px;
-    border: 1px solid #30363d;
-    text-align: left; 
+    border: 1px solid #282828;
+    text-align: center; /* Center content within sections */
   }
 
   .profile-section h2 {
     margin-top: 0;
-    border-bottom: 2px solid #58a6ff; /* Accent color */
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-    color: #79c0ff; /* Lighter Blue Text */
-    font-size: 1.8em;
+    border-bottom: 2px solid #00aaff; /* Accent color */
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+    color: #00ccff; /* Lighter/Cyan Accent Text */
+    font-size: 2em; /* Slightly larger title */
     font-weight: 500;
-    text-align: center; /* Center section titles */
   }
-
-  /* --- Featured Repositories Buttons --- */
+  
+  /* --- Repository Buttons --- */
+  #repositories {
+      background-color: #050505; /* Even darker background for repo section */
+      border-color: #222;
+  }
+  
   .repo-buttons-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
-    gap: 15px;
+    /* Adjust minmax for desired minimum button width */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 18px; /* Increased gap */
   }
 
   .repo-button {
-    display: block; /* Make the link fill the container */
-    background-color: #21262d; /* Button background */
-    color: #c9d1d9; /* Button text color */
-    padding: 15px 20px;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: #181818; /* Dark button background */
+    color: #c0c0c0; 
+    padding: 18px 15px; /* Adjusted padding */
     border-radius: 6px;
-    border: 1px solid #30363d;
+    border: 1px solid #383838;
     text-align: center;
-    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
-    text-decoration: none; /* Remove underline from link */
+    min-height: 100px; /* Ensure buttons have some height */
+    transition: all 0.2s ease;
+    text-decoration: none; 
   }
   .repo-button:hover {
-    background-color: #30363d; /* Darker hover */
-    border-color: #58a6ff; /* Accent border on hover */
-    transform: translateY(-2px);
-    text-decoration: none; /* Ensure no underline on hover */
+    background-color: #252525; 
+    border-color: #00aaff; 
+    transform: translateY(-3px); /* Slightly more lift */
+    box-shadow: 0 4px 10px rgba(0, 170, 255, 0.15);
+    text-decoration: none; 
   }
   .repo-button strong {
-    display: block;
-    font-size: 1.15em;
+    font-size: 1.1em;
     font-weight: 600;
-    color: #58a6ff; /* Repo name color */
-    margin-bottom: 5px;
+    color: #00c0ff; /* Repo name color */
+    margin-bottom: 6px;
+    word-break: break-word; /* Prevent long names from overflowing */
   }
    .repo-button span {
-      font-size: 0.9em;
-      color: #8b949e; /* Description color */
+      font-size: 0.85em;
+      color: #909090; /* Muted description color */
+      line-height: 1.3;
    }
-
-
-  /* --- Skills --- */
-  #skills {
-    text-align: center;
-  }
-  .skills-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center; 
-  }
-  .skill-item {
-    background-color: #21262d; 
-    color: #c9d1d9; 
-    padding: 8px 18px;
-    border-radius: 20px;
-    font-size: 1em;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    border: 1px solid #30363d;
-    transition: all 0.2s ease-in-out;
-  }
-  .skill-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-    background-color: #30363d;
-    border-color: #58a6ff;
-  }
+   .repo-button .fork-info {
+       font-size: 0.75em;
+       color: #777;
+       margin-top: 5px;
+       font-style: italic;
+   }
   
   /* --- GitHub Stats --- */
-  #stats {
-      text-align: center;
-  }
   .stats-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    align-items: flex-start;
+    align-items: center; /* Center items vertically */
     margin-top: 10px;
   }
   .stats-container img {
-    max-width: 100%;
+    max-width: 90%; /* Prevent oversized images on small screens */
+    width: auto; /* Allow natural width up to max-width */
     height: auto;
     border-radius: 6px;
-    border: 1px solid #30363d; /* Border for stat images */
+    /* Removed border as bg is transparent and border is in theme */
   }
    
   /* --- Connect Section --- */
-  #connect {
-    text-align: center;
-  }
   .connect-links a {
-    margin: 0 8px;
+    margin: 5px 10px; /* Add vertical margin */
     display: inline-block;
     transition: transform 0.2s ease;
   }
   .connect-links a:hover {
-    transform: scale(1.1);
+    transform: scale(1.12); /* Slightly larger scale */
   }
   .connect-links img {
-    height: 36px; 
+    height: 40px; /* Larger badges */
     width: auto;
     vertical-align: middle;
   }
@@ -187,10 +167,10 @@ Uses HTML and CSS for styling with a dark theme.
   .profile-footer {
     text-align: center;
     margin-top: 40px;
-    padding-top: 20px;
-    font-size: 0.95em;
-    color: #8b949e; /* Muted footer text */
-    border-top: 1px solid #30363d;
+    padding-top: 25px;
+    font-size: 0.9em;
+    color: #888; /* Muted footer text */
+    border-top: 1px solid #282828;
   }
 
 </style>
@@ -199,31 +179,13 @@ Uses HTML and CSS for styling with a dark theme.
 
   <header class="profile-header">
     <h1>Hackinside</h1>
-    <p>[Your Concise Tagline - e.g., Security Researcher | Hardware Enthusiast | Code Explorer]</p>
+    <p>Exploring the digital world, one line of code at a time.</p> 
+    <!-- Or replace with your preferred tagline -->
   </header>
 
-  <!-- Skills Section -->
-  <section id="skills" class="profile-section">
-    <h2>🛠️ My Tech & Skills</h2>
-    <ul class="skills-list">
-      <li class="skill-item">🐍 Python</li>
-      <li class="skill-item">🔒 Cybersecurity</li>
-      <li class="skill-item">⚙️ Reverse Engineering</li>
-      <li class="skill-item">🌐 Networking</li>
-      <li class="skill-item">🐧 Linux</li>
-      <li class="skill-item">🎮 Console Hardware</li> 
-      <li class="skill-item">💻 JavaScript</li>
-      <li class="skill-item">📄 HTML & CSS</li>
-      <li class="skill-item">🔧 Git & GitHub</li>
-      <li class="skill-item">💾 Firmware Analysis</li>
-      <li class="skill-item">💡 [Another Skill]</li>
-      <li class="skill-item">🚀 [Another Skill]</li>
-    </ul>
-  </section>
-
-  <!-- Featured Repositories Section -->
+  <!-- Repositories Section -->
   <section id="repositories" class="profile-section">
-    <h2>🚀 Featured Repositories</h2>
+    <h2>My Repositories</h2>
     <ul class="repo-buttons-list">
       <li>
         <a href="https://github.com/Hackinside/hackinside.github.io" target="_blank" rel="noopener noreferrer" class="repo-button">
@@ -249,10 +211,29 @@ Uses HTML and CSS for styling with a dark theme.
           <span>PS4/PS5 Camera Drivers & Firmware</span>
         </a>
       </li>
+       <li>
+        <a href="https://github.com/Hackinside/FSG-GOIP-snippet" target="_blank" rel="noopener noreferrer" class="repo-button">
+          <strong>FSG-GOIP-snippet</strong>
+          <span>PHP Snippet for GOIP Gateways</span>
+          <span class="fork-info">(Fork)</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/Hackinside/windows_dev_Install" target="_blank" rel="noopener noreferrer" class="repo-button">
+          <strong>windows_dev_Install</strong>
+          <span>Windows Dev Environment Setup Files</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/Hackinside/PS4-CAMERA-DRIVERS" target="_blank" rel="noopener noreferrer" class="repo-button">
+          <strong>PS4-CAMERA-DRIVERS</strong>
+          <span>Windows Drivers for PS4 Camera (WIP)</span>
+        </a>
+      </li>
       <li>
         <a href="https://github.com/Hackinside/3DORGB" target="_blank" rel="noopener noreferrer" class="repo-button">
           <strong>3DORGB</strong>
-          <span>Hardware project for 3DO RGB output (Verilog)</span>
+          <span>Hardware project for 3DO RGB (Verilog)</span>
         </a>
       </li>
       <li>
@@ -261,11 +242,18 @@ Uses HTML and CSS for styling with a dark theme.
           <span>Collection of rare 3DO/M2 system files</span>
         </a>
       </li>
-       <!-- Add more repositories as needed -->
-        <li>
+       <li>
+        <a href="https://github.com/Hackinside/3DO-information" target="_blank" rel="noopener noreferrer" class="repo-button">
+          <strong>3DO-information</strong>
+          <span>Collected Info on the 3DO Console</span>
+           <span class="fork-info">(Fork)</span>
+        </a>
+      </li>
+      <!-- Add a button to link to all repos if the list gets long -->
+      <li>
         <a href="https://github.com/Hackinside?tab=repositories" target="_blank" rel="noopener noreferrer" class="repo-button">
           <strong>View All Repositories...</strong>
-          <span>See the complete list</span>
+          <span>See the complete list on GitHub</span>
         </a>
       </li>
     </ul>
@@ -273,20 +261,19 @@ Uses HTML and CSS for styling with a dark theme.
 
   <!-- GitHub Stats Section -->
   <section id="stats" class="profile-section">
-      <h2>📊 GitHub Stats</h2>
+      <h2>GitHub Stats</h2>
       <div class="stats-container">
-        <!-- Using the github_dark theme as requested -->
-        <img src="https://github-readme-stats.vercel.app/api?username=Hackinside&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&ring_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9&bg_color=0d1117" alt="Hackinside's GitHub Stats" />
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Hackinside&layout=compact&theme=github_dark&hide_border=true&langs_count=8&text_color=c9d1d9&bg_color=0d1117" alt="Top Languages" />
-        <!-- Optional: Streak Stats -->
-        <!-- <img src="https://github-readme-streak-stats.herokuapp.com/?user=Hackinside&theme=github_dark&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakLabel=c9d1d9" alt="GitHub Streak Stats"/> -->
+         <!-- Stats using transparent background & custom colors for black theme -->
+         <img src="https://github-readme-stats.vercel.app/api?username=Hackinside&show_icons=true&theme=transparent&hide_border=true&count_private=true&include_all_commits=true&text_color=e0e0e0&icon_color=00aaff&title_color=00ccff&ring_color=00aaff" alt="Hackinside's GitHub Stats" />
+         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Hackinside&layout=compact&theme=transparent&hide_border=true&langs_count=8&text_color=e0e0e0&bg_color=00000000" alt="Top Languages" />
+         <!-- Optional: Streak Stats - Themed for dark -->
+         <!-- <img src="https://github-readme-streak-stats.herokuapp.com/?user=Hackinside&theme=radical&hide_border=true&background=00000000&ring=00aaff&fire=00aaff&currStreakLabel=e0e0e0&sideNums=e0e0e0&sideLabels=e0e0e0&currStreakNum=ffffff" alt="GitHub Streak Stats"/> -->
       </div>
   </section>
 
-
   <!-- Connect With Me Section -->
   <section id="connect" class="profile-section">
-    <h2>🤝 Connect With Me</h2>
+    <h2>Connect With Me</h2>
     <p class="connect-links">
       <a href="https://www.linkedin.com/in/hackinside/" target="_blank" rel="noopener noreferrer">
           <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
@@ -301,14 +288,14 @@ Uses HTML and CSS for styling with a dark theme.
            <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
        </a>
       <a href="https://github.com/Hackinside" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+          <img src="https://img.shields.io/badge/GitHub-333333?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/> 
+          <!-- Changed GitHub badge bg color slightly for better contrast -->
       </a>
-      <!-- Add any other links like email or portfolio if desired -->
     </p>
   </section>
 
   <footer class="profile-footer">
-    <p>Thanks for stopping by!</p>
+    <p>Navigating the digital frontier.</p>
   </footer>
 
 </div>
